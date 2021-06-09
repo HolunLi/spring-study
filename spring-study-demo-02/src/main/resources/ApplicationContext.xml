@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.holun.beans.Address">
+        <property name="homeAddress" value="上海嘉定区"></property>
+    </bean>
+
+    <bean id="stu_1" class="com.holun.beans.Student">
+        <!--普通值注入-->
+        <property name="name" value="李豪伦" />
+        <!--bean注入-->
+        <property name="address" ref="address" />
+        <!--数组注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+                <value>西游记</value>
+            </array>
+        </property>
+        <!--List注入-->
+        <property name="hobbies">
+            <list>
+                <value>唱歌</value>
+                <value>跳舞</value>
+            </list>
+        </property>
+
+    </bean>
+</beans>
