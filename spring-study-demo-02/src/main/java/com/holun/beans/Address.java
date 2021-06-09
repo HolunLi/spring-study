@@ -10,4 +10,11 @@ public class Address {
     public void setHomeAddress(String homeAddress) {
         this.homeAddress = homeAddress;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "homeAddress='" + homeAddress + '\'' +
+                '}';
+    }
 }

@@ -7,6 +7,7 @@
         <property name="homeAddress" value="上海嘉定区"></property>
     </bean>
 
+    <!-- set方式的依赖注入 -->
     <bean id="stu_1" class="com.holun.beans.Student">
         <!--普通值注入-->
         <property name="name" value="李豪伦" />
@@ -28,6 +29,33 @@
                 <value>跳舞</value>
             </list>
         </property>
+        <!--set注入-->
+        <property name="games">
+            <list>
+                <value>王者荣耀</value>
+                <value>吃鸡</value>
+            </list>
+        </property>
+        <!--map注入-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="362319920323" />
+                <entry key="银行卡" value="232094034343" />
+            </map>
+        </property>
 
+        <!-- null -->
+        <property name="wife">
+            <null />
+        </property>
+        
+        <!--properties注入-->
+        <property name="info">
+            <props>
+                <prop key="user">root</prop>
+                <prop key="password">haolun</prop>
+            </props>
+        </property>
+        
     </bean>
 </beans>

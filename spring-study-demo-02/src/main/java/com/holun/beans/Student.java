@@ -1,12 +1,10 @@
 package com.holun.beans;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 
 public class Student {
     private String name;
+    private String wife;
     private Address address;
     private String[] books;
     private List<String> hobbies;
@@ -68,5 +66,27 @@ public class Student {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public String getWife() {
+        return wife;
+    }
+
+    public void setWife(String wife) {
+        this.wife = wife;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", wife='" + wife + '\'' +
+                ", address=" + address +
+                ", books=" + Arrays.toString(books) +
+                ", hobbies=" + hobbies +
+                ", card=" + card +
+                ", games=" + games +
+                ", info=" + info +
+                '}';
     }
 }
