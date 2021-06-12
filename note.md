@@ -21,4 +21,6 @@ https://www.springframework.org/schema/context/spring-context.xsd
 @Autowired
 @Qualifier
 @Resource
+@Component 该注解放在类上,说明这个类被spring管理了，spring容器会将这个类部署成bean
+
 
