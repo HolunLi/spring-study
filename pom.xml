@@ -11,6 +11,7 @@
     <modules>
         <module>spring-study-demo-01</module>
         <module>spring-study-demo-02</module>
+        <module>spring-study-demo-03</module>
     </modules>
 
     <properties>

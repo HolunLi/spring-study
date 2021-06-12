@@ -1,4 +1,3 @@
-import com.holun.beans.Student;
 import com.holun.beans.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -33,10 +33,10 @@
         </property>
         <!--set注入-->
         <property name="games">
-            <list>
+            <set>
                 <value>王者荣耀</value>
                 <value>吃鸡</value>
-            </list>
+            </set>
         </property>
         <!--map注入-->
         <property name="card">
