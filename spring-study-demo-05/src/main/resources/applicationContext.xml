@@ -7,6 +7,6 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 指定要扫描的包，该包下的注解才会生效 -->
-    <context:component-scan base-package="com.holun.pojo" />
+    <context:component-scan base-package="com.holun" />
     <context:annotation-config />
 </beans>

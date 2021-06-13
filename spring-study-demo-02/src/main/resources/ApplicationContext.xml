@@ -58,6 +58,6 @@
         </property>
     </bean>
 
-    <bean id="user_1" class="com.holun.beans.User" p:name="独一味" p:age="77" />
-    <bean id="user_2" class="com.holun.beans.User" c:name="老江" c:age="88" />
+    <bean id="user_1" class="com.holun.beans.com.holun.pojo.User" p:name="独一味" p:age="77" />
+    <bean id="user_2" class="com.holun.beans.com.holun.pojo.User" c:name="老江" c:age="88" />
 </beans>

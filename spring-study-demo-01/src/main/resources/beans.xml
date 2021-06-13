@@ -5,20 +5,20 @@
 
 
     <!--基于setter的依赖注入 -->
-    <bean id="user_1" class="com.holun.beans.User" name="u1" > <!-- 后面的name表示给这个bean,再取一个别名u1-->
+    <bean id="user_1" class="com.holun.beans.com.holun.pojo.User" name="u1" > <!-- 后面的name表示给这个bean,再取一个别名u1-->
         <property name="name" value="holun" /> <!--创建User对象,并为User对象的name属性赋值(采用此方法,则对应的bean必须提供set方法) -->
         <property name="age" value = "18" />
     </bean>
     <!--基于构造函数的依赖注入 -->
-    <bean id="user_2" class="com.holun.beans.User" >  <!-- 基于构造方法的参数名 -->
+    <bean id="user_2" class="com.holun.beans.com.holun.pojo.User" >  <!-- 基于构造方法的参数名 -->
        <constructor-arg name="name" value="伦哥" />
        <constructor-arg name="age" value="17" />
     </bean>
-    <bean id="user_3" class="com.holun.beans.User" >   <!-- 基于构造方法的参数类型 -->
+    <bean id="user_3" class="com.holun.beans.com.holun.pojo.User" >   <!-- 基于构造方法的参数类型 -->
         <constructor-arg type="java.lang.String" value="李豪伦"/>
         <constructor-arg type="int" value="19" />
     </bean>
-    <bean id="user_4" class="com.holun.beans.User" name="u4" >  <!-- 基于构造方法的参数位置 -->
+    <bean id="user_4" class="com.holun.beans.com.holun.pojo.User" name="u4" >  <!-- 基于构造方法的参数位置 -->
         <constructor-arg index="0" value="老张"/>
         <constructor-arg index="1" value="19" />
     </bean>
