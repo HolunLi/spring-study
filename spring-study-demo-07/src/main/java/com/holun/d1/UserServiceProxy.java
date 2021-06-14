@@ -1,5 +1,10 @@
 package com.holun.d1;
 
+/**
+ * 静态代理，即手动的创建代理类
+ */
+
+//UserServiceProxy是目标类UserServiceImpl的代理类
 public class UserServiceProxy implements UserService {
     private UserService userService;
 

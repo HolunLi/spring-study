@@ -1,6 +1,5 @@
-package com.holun.d1;
+package com.holun.d2;
 
-//目标类
 public class UserServiceImpl implements UserService {
     @Override
     public void add() {
@@ -20,5 +19,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void query() {
         System.out.println("查询用户");
+    }
+
+    @Override
+    public void add(String username) {
+        System.out.println("添加" + username + "用户");
     }
 }
