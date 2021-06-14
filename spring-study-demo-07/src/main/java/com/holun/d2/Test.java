@@ -1,13 +1,9 @@
-import com.holun.d2.UserService;
-import com.holun.d2.UserServiceImpl;
-import com.holun.d2.UserServiceProxy;
+package com.holun.d2;
 
 import java.lang.reflect.Proxy;
 
 public class Test {
-
-    @org.junit.Test
-    public void test() {
+    public static void main(String[] args) {
         //创建目标对象
         UserService userService = new UserServiceImpl();
         //创建InvocationHandler对象(调用处理器)。调用处理器会自动调用其invoke()方法
