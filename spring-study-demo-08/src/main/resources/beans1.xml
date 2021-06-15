@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--基于XML配置文件实现aop，需要导入aop的约束-->
+    <!--1. 使用原生的SpringAPI完成AOP操作-->
+    <bean id="userService" class="com.holun.d1.UserServiceImpl" />
+    <bean id="beforeLog" class="com.holun.d1.BeforeLog" />
+    <bean id="afterLog" class="com.holun.d1.AfterLog" />
+
+    <aop:config>
+        <!--通过AspectJ切入表达式,定义切入点，execution表达式中的内容是要切入的位置,也就是通知要执行的位置(需要增强的地方)-->
+        <aop:pointcut id="pointcut1" expression="execution(* com.holun.d1.UserServiceImpl.add(..))"/>
+        <aop:pointcut id="pointcut2" expression="execution(String com.holun.d1.UserServiceImpl.add(String))"/>
+
+       <!-- 将前置通知应用到切入点pointcut1-->
+        <aop:advisor advice-ref="beforeLog" pointcut-ref="pointcut1" />
+        <!--将后置通知应用到切入点pointcut2-->
+        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut2" />
+    </aop:config>
+</beans>

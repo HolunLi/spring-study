@@ -33,7 +33,7 @@ public class UserServiceProxy implements InvocationHandler {
         Object res = null;
         System.out.println("[debug] " + method.getName());
         //执行目标对象的方法。目标对象可能有多个方法,具体执行哪个方法，取决于代理对象调用哪个方法。
-        res = method.invoke(target, args);
-        return res; //res是method.invoke方法的返回值，同样也是目标方法的返回值。
+        res = method.invoke(target, args); //res是执行目标方法后的返回值
+        return res; //此时的res是method.invoke方法的返回值，也就是增强后的方法的返回值。
     }
 }

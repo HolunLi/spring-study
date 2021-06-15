@@ -34,3 +34,23 @@ https://www.springframework.org/schema/context/spring-context.xsd
 
   注:@Component和它的三个衍生注解，功能都是相同的。
 
+#常用的依赖
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>5.3.7</version>
+    </dependency>
+
+    <!-- 导入junit依赖,junit是单元测试工具 -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>1.9.6</version>
+    </dependency>

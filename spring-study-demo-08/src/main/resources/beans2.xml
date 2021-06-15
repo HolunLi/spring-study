@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd" >
+
+    <!--基于XML配置文件实现aop，需要导入aop的约束-->
+    <!--2. 自定义切面完成AOP操作-->
+    <bean id="userService" class="com.holun.d3.UserServiceImpl" />
+    <bean id="userProxy" class="com.holun.d3.UserProxy" />
+
+    <aop:config>
+        <!-- 定义切入点 -->
+        <aop:pointcut id="point1" expression="execution(* com.holun.d3.UserServiceImpl.add(String))" />
+        <aop:pointcut id="point2" expression="execution(* com.holun.d3.UserServiceImpl.add())"/>
+
+        <!-- 配置切面 -->
+        <aop:aspect ref="userProxy">
+            <!--将前置增强应用到切入点point1-->
+            <aop:before method="fun1" pointcut-ref="point1" />
+            <!--将环绕增强应用到切入点point2-->
+            <aop:around method="fun2" pointcut-ref="point2" />
+         </aop:aspect>
+
+    </aop:config>
+
+
+</beans>
