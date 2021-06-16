@@ -11,6 +11,7 @@
     <context:component-scan base-package="com.holun.d2" />
 
     <!--开启Aspect生成代理对象(如果发现某个类上有@Aspect注解,就会将这个类的对象生成代理对象)-->
-    <aop:aspectj-autoproxy />
+    <aop:aspectj-autoproxy /> <!-- 属性proxy-target-class的值默认是false。false代表采用jdk动态代理,true代表采用cglib动态代理。
+                                   如果被代理的对象没有实现接口,也会采用cglib-->
 
 </beans>

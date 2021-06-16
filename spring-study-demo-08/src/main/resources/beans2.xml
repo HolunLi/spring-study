@@ -7,8 +7,8 @@
 
     <!--基于XML配置文件实现aop，需要导入aop的约束-->
     <!--2. 自定义切面完成AOP操作-->
-    <bean id="userService" class="com.holun.d3.UserServiceImpl" />
-    <bean id="userProxy" class="com.holun.d3.UserProxy" />
+    <bean id="userService" class="com.holun.d3.UserServiceImpl" /> <!--注入被代理的对象 -->
+    <bean id="userProxy" class="com.holun.d3.UserProxy" />  <!--注入代理对象(有代理类创建的对象) -->
 
     <aop:config>
         <!-- 定义切入点 -->
