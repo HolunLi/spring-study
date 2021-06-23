@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="spring-dao.xml" />
+
+    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.holun.dao.UserMapper" />
+        <property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
+        <!-- <property name="sqlSessionFactory" ref="sqlSessionFactory" />-->
+
+        <!--
+        注: MapperFactoryBean继承SqlSessionDaoSupport，SqlSessionDaoSupport是一个抽象的支持类，
+        用来为提供 SqlSession。SqlSessionDaoSupport 需要通过属性设置一个sqlSessionFactory 或
+        SqlSessionTemplate。如果两个属性都被设置了，那么 SqlSessionFactory 将被忽略。
+        -->
+
+    </bean>
+
+
+    <!-- 不建议使用,因为使用这种方法,还需要创建一个UserMapperImpl -->
+    <!--
+    <bean id="userMapper" class="com.holun.dao.impl.UserMapperImpl" >
+        <property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
+    </bean>
+    -->
+</beans>
